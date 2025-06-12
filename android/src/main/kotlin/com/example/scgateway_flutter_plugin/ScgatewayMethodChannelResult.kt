@@ -13,7 +13,6 @@ class ScgatewayMethodChannelResult(val rawResult: MethodChannel.Result, val acti
             isResponseSubmitted = true
         }
     }
-
     override fun error(errorCode: String, errorMessage: String?, errorDetails: Any?) {
         if (isResponseSubmitted) return
         activity.runOnUiThread { 
